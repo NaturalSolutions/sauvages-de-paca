@@ -1,0 +1,11 @@
+#Ignore Mac's Files
+*.DS_Store
+ bootstrap_sauvages/.DS_Store
+.DS_Store
+#Ignore directory json
+bootstrap_sauvages/json/*
+#Ignore theme bootstrap
+bootstrap/
+#Ignore README.txt theme bootstrap
+README.txt
+#lalla
