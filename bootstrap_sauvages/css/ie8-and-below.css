@@ -1,0 +1,31 @@
+.breadcrumb{
+  margin-top:70px;
+}
+.logo-region{
+  margin-top : 40px;
+}
+
+#fold1{
+  margin-top:2em;  
+}
+
+#fold6 .table TD{
+  float:left;
+  width:110px;
+}
+
+.en-tete-intro{
+  margin-top : 40px;
+}
+
+.en-tete-intro p.lead{
+  margin-top : 80px;  
+}
+
+.c-est-par-ici.span2  p{
+  margin-top : 10px;
+}
+
+.front .main-container {
+    background-image: none;
+}
