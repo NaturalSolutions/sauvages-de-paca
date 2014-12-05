@@ -20,6 +20,8 @@ function bootstrap_sauvages_preprocess_region(&$variables, $hook) {
 function bootstrap_sauvages_preprocess_html(&$variables) {
    // Add conditional stylesheets for IE
   drupal_add_css(path_to_theme() . '/css/ie8-and-below.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lt IE 9', '!IE' => FALSE), 'preprocess' => FALSE));
+	drupal_add_css(libraries_get_path('flexslider').'/flexslider.css', array('type' => 'external'));
+
 } // end preprocess_html
 
 /***************CUSTOM CONTACT FORM MODULE**************************/
