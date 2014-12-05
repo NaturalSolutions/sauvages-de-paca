@@ -46,16 +46,18 @@
 (function() {
   var numTaxonFlore = jQuery(".query").text();
   numTaxonFlore = numTaxonFlore.replace(/\s+/g, '').toLowerCase();
-  var celjson = "sites/all/themes/bootstrap_sauvages/json/cel_taxon_sauvages_"+numTaxonFlore+".json";
-  jQuery.getJSON( celjson)
-    .done(function( data ) {
-      jQuery( "#"+numTaxonFlore).empty();
-      jQuery( "#"+numTaxonFlore).append( data.total );
-    })
-    .fail(function( jqxhr, textStatus, error ) {
-    var err = textStatus + ", " + error;
-    console.log( "Request Failed: " + err );
-    });
-    jQuery(".query").empty();
+  if (numTaxonFlore !== '') {
+    var celjson = "sites/all/themes/bootstrap_sauvages/json/cel_taxon_sauvages_"+numTaxonFlore+".json";
+    jQuery.getJSON( celjson)
+      .done(function( data ) {
+        jQuery( "#"+numTaxonFlore).empty();
+        jQuery( "#"+numTaxonFlore).append( data.total );
+      })
+      .fail(function( jqxhr, textStatus, error ) {
+        var err = textStatus + ", " + error;
+        console.log( "Request Failed: " + err );
+      });
+      jQuery(".query").empty();
+  }
 })();
 </script>
