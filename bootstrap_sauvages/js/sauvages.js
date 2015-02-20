@@ -7,8 +7,16 @@ jQuery(document).ready(function(){
       jQuery(this).find('.logo-gris').toggle();
       jQuery(this).find('.logo-couleur').toggle();
   });
-    jQuery('.ckeditor_links').hide();
+  jQuery('.ckeditor_links').hide();
+  var UserLogged = jQuery('body').hasClass('logged-in');
+  var menuMain = jQuery('#navbar nav').attr("role") === 'navigation';
+  var btnConnexion = jQuery('.menu.nav li').text() === 'Connexion';
+    console.log(btnConnexion,menuMain);
+  if (UserLogged) {
+    jQuery('#navbar nav .menu.nav').first().find('.last').hide();
+  }
 });
+
 
 (function ($) {
   Drupal.behaviors.LoginToboggan = {
