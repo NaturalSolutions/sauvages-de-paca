@@ -32,7 +32,7 @@ regions[footer]         = 'Footer'
 stylesheets[all][] = twitter-bootstrap_2.3/css/bootstrap.min.css
 stylesheets[all][] = css/style.css
 ;Issu : Adding a external stylesheets
-;stylesheets[all][] = ../../libraries/flexslider/flexslider.css
+stylesheets[all][] = www/sites/all/libraries/flexslider/flexslider.css
 
 ;**********************************
 ; METHOD 1: Bootstrap Source Files
