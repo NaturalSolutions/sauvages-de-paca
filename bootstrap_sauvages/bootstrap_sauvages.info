@@ -27,6 +27,7 @@ regions[footer]         = 'Footer'
  scripts[] = 'js/sauvages.js'
 
 ; Stylesheets
+stylesheets[all][] = twitter-bootstrap_2.3/css/bootstrap.min.css
 stylesheets[all][] = css/style.css
 ;Issu : Adding a external stylesheets
 ;stylesheets[all][] = ../../libraries/flexslider/flexslider.css
@@ -48,12 +49,14 @@ stylesheets[all][] = css/style.css
 ; scripts[] = 'bootstrap/js/bootstrap-scrollspy.js'
 ; scripts[] = 'bootstrap/js/bootstrap-transition.js'
 ; scripts[] = 'bootstrap/js/bootstrap-typeahead.js'
-; 
+
+scripts[] = 'twitter-bootstrap_2.3/js/bootstrap.min.js'
+
 ; ; Settings inherited by base theme, uncomment to override.
 ; ;settings[toggle_name] = 0
 ; ;settings[toggle_search] = 1
 ; ; Disable the CDN as we are using our own source files.
-; settings[cdn_bootstrap] = 0
+ settings[cdn_bootstrap] = 0
 
 
 ;*************************
@@ -61,8 +64,8 @@ stylesheets[all][] = css/style.css
 ;*************************
 ; 
 ;Settings inherited by base theme, uncomment to override.
-settings[toggle_name] = 0
-settings[toggle_search] = 1
-settings[cdn_bootstrap] = 1
-settings[cdn_bootstrap_version] = 2.3.2
+;settings[toggle_name] = 0
+;settings[toggle_search] = 1
+;settings[cdn_bootstrap] = 1
+;settings[cdn_bootstrap_version] = 2.3.2
 
