@@ -21,8 +21,11 @@
  * regardless of any changes in the aliasing that might happen if
  * the view is modified.
  */
+
 ?>
 <?php if($output): ?>
 <?php $image = file_load($output); ?>
 <img src= '<?php echo file_create_url($image->uri) ?>' />
+<?php else: ?>
+<img class='thumbnail-mini' src= '<?php echo file_create_url('public://') ?>default_images/image-par-defaut.jpg' />
 <?php endif; ?>

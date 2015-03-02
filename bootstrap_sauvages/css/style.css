@@ -129,6 +129,14 @@ div.row-fluid [class*="span"] .center-in-span {
 .text-align-right{
     text-align: right;
 }
+.thumbnail-mini{
+    width: 50px;
+}
+.ellipsis{
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
 /*****BOUTON************/
 .btn-participe{
 border-left: 3px outset #631917;
@@ -193,7 +201,6 @@ font-size: 15px;
 /*****HOME FOND********/
 body{
  /* background-image: url('../image/texture/fond-beige-02.jpg');*/
- 
 }
 
 .front .main-container {
@@ -337,8 +344,37 @@ margin:0px 2px;
 #fold3{
   display:none;
 }
-
-
+/*TODO : separer fold 3 et 3 bis*/
+/********fold3 BIS********/
+.region-fold3 #block-views-v-obs-block{
+    background: #A0CA10;
+}
+.region-fold3 #block-views-v-obs-block h2{
+    font-family: inherit;
+    text-align: center;
+    text-shadow: none;
+}
+.region-fold3 #block-views-v-obs-block ul {
+    list-style-type: none;
+    margin-left: 10px;
+    margin:0 10px 10px;
+}
+.region-fold3 #block-views-v-obs-block ul li{
+    list-style-type: none;
+    font-size:13px;
+    clear: left;
+    margin-bottom: 10px;
+}
+div.views-field.views-field-fid{
+    float: left;
+}
+.region-fold3 ul li div.views-field.views-field-rue{
+    display: inline;
+    margin-left: 5px;
+}
+.region-fold3 ul li .views-field-nom-scientifique,.region-fold3 ul li .views-field-name{
+    margin-left:55px;
+}
 /********fold4********/
 
 #fold4{

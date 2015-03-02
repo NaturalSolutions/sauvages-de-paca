@@ -92,8 +92,19 @@
         <div class="row-fluid">
           <div class="span12">
             <div class="row-fluid">
-              <div class="span4">
-                <?php print render($page['fold3']); ?>
+              <?php print render($page['fold3']);?>
+              <!-- TODO créer block programmaticalement pour le classement -->
+              <?php $results= _ns_score_get_classement();?>
+              <div>
+                <h2>Classement</h2>
+                <ul>
+                <?php foreach($results as $item){ ?>
+                  <li>
+                    <span class=""><?php print($item->name);?></span> 
+                    <span class=""><?php print($item->score); ?></span>
+                  </li>
+                <?php } ?>
+                </ul>
               </div>
             </div>
           </div>
@@ -192,7 +203,7 @@
                   <h4>Les pilotes</h4>
                   <div class="row-fluid">
                     <!-- *****block view partenaire pilote****** -->
-		      <?php print views_embed_view('v_liste_partenaire','block'); ?>
+                    <?php print views_embed_view('v_liste_partenaire','block'); ?>
                   </div>
                 </div>
             
@@ -208,15 +219,15 @@
                 <div class="span6">
                  <h4>Les acteurs sur Marseille</h4>
                   <div class="row-fluid">
-                <!-- *****block view partenaire acteur sur Marseille****** -->
-		  <?php print views_embed_view('v_liste_partenaire','block_1'); ?>
+                  <!-- *****block view partenaire acteur sur Marseille****** -->
+                  <?php print views_embed_view('v_liste_partenaire','block_1'); ?>
                   </div>
                 </div>
                 <div class="span6">
                   <h4>Les acteurs sur Salon de Provence</h4>
                   <div class="row-fluid">
-                  <!-- *****block view partenaire acteur sur Salon de Provence****** -->
-		  <?php print views_embed_view('v_liste_partenaire','block_3'); ?>
+                    <!-- *****block view partenaire acteur sur Salon de Provence****** -->
+                    <?php print views_embed_view('v_liste_partenaire','block_3'); ?>
                   </div>
                 </div>
               </div>
