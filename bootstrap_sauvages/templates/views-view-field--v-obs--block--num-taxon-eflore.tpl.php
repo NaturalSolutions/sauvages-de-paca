@@ -22,4 +22,10 @@
  * the view is modified.
  */
 ?>
-<?php print $view = views_embed_view('v_fiche_espece', 'block', $output);?>
+
+<?php 
+  /* Modification template field numero de taxon eflore
+  * Récupération de l'$output pour le afficher la view espèce 
+  */
+  print $view = views_embed_view('v_fiche_espece', 'block', $output);
+?>
