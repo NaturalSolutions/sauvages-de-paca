@@ -14,7 +14,7 @@
             $('.slides li').find('.flex-caption').height(0);
             $('.slides li ').hover(function(){
                 if (!$(this).find('.flex-caption').hasClass('animated')) {
-                    $(this).find('.flex-caption').dequeue().stop().animate({ height: "50px" });
+                    $(this).find('.flex-caption').dequeue().stop().animate({ height: "36px" });
                 }
                 }, function(){
                       $(this).find('.flex-caption').addClass('animated').animate({ height: "0px" }, "normal", "linear", function() {

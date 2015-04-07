@@ -318,20 +318,20 @@ height: 36px;
 }
 .flex-caption p{
     font-size: 15px;
-    margin: 6px 4px;
+    margin: 10px 4px;
     color: white;
-    width: 230px;
+    width: 74%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    float: left;
 }
 .result {
-position: absolute;
-bottom: 0;
-color:#DEDB00;
-width: 100%;
-margin: 0 auto 0 250px;
-font-size: 18px !important;
+  color:#DEDB00;
+  font-size: 18px !important;
+  width:23%;
+  float:right;
+  margin-top: 4px;
 }
 .result:before {
 content:url(../image/picto/fleur-obs.png);
