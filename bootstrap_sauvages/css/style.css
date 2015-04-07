@@ -344,22 +344,24 @@ margin:0px 2px;
 #fold3{
   display:none;
 }
-/*TODO : separer fold 3 et 3 bis*/
-/********fold3 BIS********/
-.region-fold3 #block-views-v-obs-block{
+/******** foldJeu ********/
+#foldJeu .block {
+  padding: 10px;
+}
+#foldJeu .block{
     background: #A0CA10;
 }
-.region-fold3 #block-views-v-obs-block h2{
+#foldJeu .block h2{
     font-family: inherit;
     text-align: center;
     text-shadow: none;
 }
-.region-fold3 #block-views-v-obs-block ul {
+#foldJeu .block ul {
     list-style-type: none;
     margin-left: 10px;
     margin:0 10px 10px;
 }
-.region-fold3 #block-views-v-obs-block ul li{
+#foldJeu .block ul li{
     list-style-type: none;
     font-size:13px;
     clear: left;
@@ -368,13 +370,52 @@ margin:0px 2px;
 div.views-field.views-field-fid{
     float: left;
 }
-.region-fold3 ul li div.views-field.views-field-rue{
+#foldJeu ul li div.views-field.views-field-rue{
     display: inline;
     margin-left: 5px;
 }
-.region-fold3 ul li .views-field-nom-scientifique,.region-fold3 ul li .views-field-name{
+#foldJeu ul li .views-field-nom-scientifique,#foldJeu ul li .views-field-name,#foldJeu ul li .views-field-num-taxon-eflore{
     margin-left:55px;
 }
+.fill{
+    border:none;
+    border-bottom:1px dotted #000;
+    display:inline-block;
+}
+.class-nat-name,.class-nat-order{
+  margin:2px; 
+}
+/* icon block */
+#foldJeu .block-classement-national  .block-title:before{
+  content: '';
+  background:url('../image/icon-badge/badges_5_obs.svg');
+  width: 100px;
+  height: 100px;
+  display:block;
+  background-size: cover;
+  margin: auto;
+}
+#foldJeu #block-views-v-obs-block .block-title:before{
+  content: '';
+  background:url('../image/icon-badge/badges_paca.svg');
+  width: 100px;
+  height: 100px;
+  display:block;
+  background-size: cover;
+  margin: auto;
+}
+
+#foldJeu #block-block-1 .block-title:before{
+  content: '';
+  background:url('../image/icon-badge/badges_bienvenu.svg');
+  width: 100px;
+  height: 100px;
+  display:block;
+  background-size: cover;
+  margin: auto;
+}
+
+
 /********fold4********/
 
 #fold4{

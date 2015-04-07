@@ -77,7 +77,7 @@
     </section>
     <?php //endif; ?>
 
-    <?php if ($page['fold3']): ?> <!-- /region fold3 -->
+    <?php// if ($page['fold3']): ?> <!-- /region fold3 -->
      <section id="fold3" class="span12 fold3">
       <div class="container">
         <div class="row-fluid">
@@ -87,31 +87,51 @@
         </div>
       </div>
      </section>
-    <section>
+    <section id="foldJeu">
       <div class="container">
         <div class="row-fluid">
           <div class="span12">
             <div class="row-fluid">
-              <?php print render($page['fold3']);?>
-              <!-- TODO créer block programmaticalement pour le classement -->
-              <?php $results= _ns_score_get_classement();?>
-              <div>
-                <h2>Classement</h2>
-                <ul>
-                <?php foreach($results as $item){ ?>
-                  <li>
-                    <span class=""><?php print($item->name);?></span> 
-                    <span class=""><?php print($item->score); ?></span>
-                  </li>
-                <?php } ?>
-                </ul>
+            <?php// print render($page['fold3']);?> 
+              <!-- Réglement jeu-->
+              <div class="span4">
+              <?php
+                $blockPrezJeu = block_load('block','1');
+                print drupal_render(_block_get_renderable_array(_block_render_blocks(array($blockPrezJeu))));
+              ?>
+              </div>
+              <!-- Classement PACA -->
+              <?php $results = _ns_score_get_classement();
+                    $Rresults =array_reverse($results);
+                    $count = count($Rresults);
+              ?>
+              <div class="span4">
+                <section class="block block-classement-national clearfix">
+                <h2 class="block-title">Classement</h2>
+                  <ul>
+                  <?php for($i=0; $i<$count; $i++ ){ ?>
+                    <li class="item-container">
+                      <span class="class-nat-name"><?php print($Rresults[$i]->name);?></span> 
+                      <span class="fill"></span>
+                      <span class="class-nat-order pull-right"><?php print($i+1); ?></span>
+                    </li>
+                  <?php } ?>
+                  </ul>
+                </section>
+              </div>
+              <!-- dernières obs nationale-->
+              <div class="span4">
+                <?php
+                  $blockVObsNat = block_load('views','v_obs-block');
+                  print drupal_render(_block_get_renderable_array(_block_render_blocks(array($blockVObsNat))));
+                ?>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <?php endif; ?>
+    <?php //endif; ?>
 
     <section id="fold4" class="span12 fold4">
       <div class="container">

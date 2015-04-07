@@ -12,7 +12,34 @@ jQuery(document).ready(function(){
   if (UserLogged) {
     jQuery('#navbar nav .menu.nav').first().find('.last').hide();
   }
+
 });
+
+//Dotted in section foldJeu
+Drupal.behaviors.fillLine = {
+  attach: function (context, settings) {
+    jQuery('.item-container').each(function(){
+      var item = jQuery('.class-nat-name', jQuery(this));
+      var score = jQuery('.class-nat-order', jQuery(this));
+      var itemWidth = item.width();
+      var scoreWidth = score.width();
+
+      var offset1 = item.offset().left;
+      var offset2 = score.offset().left;
+      var fillerWidth = (offset2 - offset1) - (itemWidth + scoreWidth);
+
+      jQuery('.fill', jQuery(this)).css('width', fillerWidth - 10);
+    });
+  }
+};
+
+//same height for the blocks
+Drupal.behaviors.blockSameheight = {
+  attach: function (context, settings) {
+    var heightDivJeu = jQuery("#foldJeu .span12").height();
+    jQuery("#foldJeu .span4 .block").height(heightDivJeu);
+  }
+};
 
 
 (function ($) {
