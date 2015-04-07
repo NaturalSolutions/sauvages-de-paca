@@ -40,7 +40,6 @@
     <?php print $field->content; ?>
   <?php print $field->wrapper_suffix; ?>
 <?php endforeach; ?>
-<span class="result" id="<?php print $numTaxonFlore ?>"></span>
 
 <script type="text/javascript">
 (function() {
