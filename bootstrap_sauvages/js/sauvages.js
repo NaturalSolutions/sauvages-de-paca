@@ -41,7 +41,14 @@ Drupal.behaviors.blockSameheight = {
   }
 };
 
+// hide content user-profile in page content user
+Drupal.behaviors.hideUserProfileContent = {
+  attach: function (context, settings) {
+    jQuery('.user-profile-content .profile').hide();
+  }
+};
 
+// Custom login toboggan
 (function ($) {
   Drupal.behaviors.LoginToboggan = {
     attach: function (context, settings) {
