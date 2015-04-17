@@ -25,7 +25,7 @@
 ?>
 <?php if($output): ?>
 <?php $image = file_load($output); ?>
-<img src= '<?php echo file_create_url($image->uri) ?>' />
+<img style="background-image : url(<?php echo file_create_url($image->uri) ?>);background-size:cover;background-repeat:no-repeat;" src= "" />
 <?php else: ?>
-<img class='thumbnail-mini' src= '<?php echo file_create_url('public://') ?>default_images/image-par-defaut.jpg' />
+<img class="thumbnail-mini" src= "<?php echo file_create_url('public://') ?>default_images/image-par-defaut.jpg" />
 <?php endif; ?>
