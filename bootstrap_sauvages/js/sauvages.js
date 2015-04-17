@@ -19,6 +19,7 @@ jQuery(document).ready(function(){
 Drupal.behaviors.fillLine = {
   attach: function (context, settings) {
     jQuery('.item-container').each(function(){
+      jQuery('.class-nat-order').addClass('pull-right');
       var item = jQuery('.class-nat-name', jQuery(this));
       var score = jQuery('.class-nat-order', jQuery(this));
       var itemWidth = item.width();
@@ -36,7 +37,7 @@ Drupal.behaviors.fillLine = {
 //same height for the blocks
 Drupal.behaviors.blockSameheight = {
   attach: function (context, settings) {
-    var heightDivJeu = jQuery("#foldJeu .span12").height();
+    var heightDivJeu = jQuery("#foldJeu #block-views-v-obs-block").height();
     jQuery("#foldJeu .span4 .block").height(heightDivJeu);
   }
 };
