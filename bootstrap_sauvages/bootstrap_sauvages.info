@@ -8,6 +8,7 @@ regions[navigation]     = 'Navigation'
 regions[header]         = 'Top Bar'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
+regions[summary]        = 'Summary'
 regions[content]        = 'Content'
 ; Region fold
 regions[fold1]     = 'fold1'
@@ -22,6 +23,7 @@ regions[footer]         = 'Footer'
 
  scripts[] = '../../libraries/flexslider/jquery.flexslider-min.js'
  scripts[] = '../../libraries/colorbox/jquery.colorbox-min.js'
+ scripts[] = '../../libraries/jquery_autopager/jquery.autopager-1.0.0.js'
 
  scripts[] = 'js/flexslider_sauvages.js'
  scripts[] = 'js/sauvages.js'
