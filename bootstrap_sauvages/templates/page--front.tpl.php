@@ -91,6 +91,7 @@
       <div class="container">
         <div class="row-fluid">
           <div class="span12">
+            <h3 class="span12">Le jeu</h3>
             <div class="row-fluid">
             <?php// print render($page['fold3']);?> 
               <!-- Réglement jeu-->
@@ -101,19 +102,19 @@
               ?>
               </div>
               <!-- Classement PACA -->
-              <?php $results = _ns_score_get_classement();
-                    $Rresults =array_reverse($results);
-                    $count = count($Rresults);
+              <?php $results = _ns_score_get_classement_PACA();
+                    $count = count($results);
               ?>
               <div class="span4">
                 <section class="block block-classement-national clearfix">
-                <h2 class="block-title">Classement</h2>
+                <h2 class="block-title">Classement PACA</h2>
                   <ul>
                   <?php for($i=0; $i<$count; $i++ ){ ?>
                     <li class="item-container">
-                      <span class="class-nat-name"><?php print($Rresults[$i]->name);?></span> 
+                      <span><?php print($i+1); ?> - </span>
+                      <span class="class-nat-name"><?php print($results[$i]->name);?></span> 
                       <span class="fill"></span>
-                      <span class="class-nat-order pull-right"><?php print($i+1); ?></span>
+                      <span class="class-nat-order pull-right"><?php print($results[$i]->score);?></span>
                     </li>
                   <?php } ?>
                   </ul>

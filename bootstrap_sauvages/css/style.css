@@ -348,8 +348,11 @@ margin:0px 2px;
 #foldJeu .block {
   padding: 10px;
 }
+#foldJeu .row-fluid{
+  margin: 20px 0px;
+}
 #foldJeu .block{
-    background: #A0CA10;
+  background: rgba(254, 254, 254, 0.5);
 }
 #foldJeu .block h2{
     font-family: inherit;
@@ -363,7 +366,7 @@ margin:0px 2px;
 }
 #foldJeu .block ul li{
     list-style-type: none;
-    font-size:13px;
+    font-size:15px;
     clear: left;
     margin-bottom: 10px;
 }
@@ -388,7 +391,7 @@ div.views-field.views-field-fid{
 /* icon block */
 #foldJeu .block-classement-national  .block-title:before{
   content: '';
-  background:url('../image/icon-badge/badges_5_obs.svg');
+  background:url('../image/icon-badge/clas-hp-nt.svg');
   width: 100px;
   height: 100px;
   display:block;
@@ -397,7 +400,7 @@ div.views-field.views-field-fid{
 }
 #foldJeu #block-views-v-obs-block .block-title:before{
   content: '';
-  background:url('../image/icon-badge/badges_paca.svg');
+  background:url('../image/icon-badge/obs-hp-nt.svg');
   width: 100px;
   height: 100px;
   display:block;
@@ -407,12 +410,18 @@ div.views-field.views-field-fid{
 
 #foldJeu #block-block-1 .block-title:before{
   content: '';
-  background:url('../image/icon-badge/badges_bienvenu.svg');
+  background:url('../image/icon-badge/trophy-hp-nt.svg');
   width: 100px;
   height: 100px;
   display:block;
   background-size: cover;
   margin: auto;
+}
+
+/*thumbnail obs*/
+#foldJeu #block-views-v-obs-block .field-content img{
+  width: 50px;
+  height: 50px;
 }
 
 
@@ -421,7 +430,7 @@ div.views-field.views-field-fid{
 #fold4{
   padding: 1em 0 13em;
 }
-#fold4 h3{
+#fold4 h3,#foldJeu h3{
   font-size: 36px;
   text-align: center;
   color:#222;
@@ -610,7 +619,9 @@ footer .ombre-footer{
   padding: 8px;
   min-height: 216px;
 }
-.footer .nav>li>a:hover, .nav>li>a:focus {
+.footer .nav>li>a:hover, 
+/*.nav>li>a:focus*/ 
+{
   background-color: #222;
 }
 .footer .nav {

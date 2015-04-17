@@ -16,7 +16,7 @@
 				</div>
 				<div class="row-fluid wrapper-accroche">
 						<div class="span12">
-							<p class="span8 offset2" id="accroche-footer" >Je me promène en ville, j’identifie et je photographie les plantes sauvages de ma rue. Je transmets les informations aux scientifiques&nbsp;!</p>
+							<p class="span8 offset2 hidden-tablet hidden-phone" id="accroche-footer" >Je me promène en ville, j’identifie et je photographie les plantes sauvages de ma rue. Je transmets les informations aux scientifiques&nbsp;!</p>
 						</div>
 				</div>
 				<div class="row-fluid">
