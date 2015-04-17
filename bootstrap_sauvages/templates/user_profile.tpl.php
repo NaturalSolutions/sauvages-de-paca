@@ -34,18 +34,17 @@
  * @ingroup themeable
  */
 ?>
-<div class="profile row-fluid"<?php print $attributes; ?>>
-  <div class="well span12">
-    <div class="span3">
+<div class="profile row-fluid"<?php print $attributes; ?> >
+  <div class="span12">
+      <?php print render($user_profile["#entity_type"]); ?>
       <?php print render($user_profile['field_avatar']); ?>
       <h4><?php print render($user_profile['summary']["member_for"]['#title']); ?>&nbsp;: </h4>
       <p><?php print render($user_profile['summary']["member_for"]["#markup"]); ?></p>
-    </div>
-    <div class="span9">
+  </div>
+  <div class="span12">
       <h4><?php print render($user_profile["field_biographie"]["#title"]); ?></h4>
       <?php print render($user_profile["field_biographie"]["und"][0]["value"]); ?>
       <?php print render($user_profile); ?>
-    </div>
   </div>
   
 </div>

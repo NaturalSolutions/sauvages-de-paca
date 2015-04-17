@@ -61,7 +61,7 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+      <?php //if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>
@@ -75,12 +75,38 @@
       <?php if (!empty($page['help'])): ?>
         <div class="well"><?php print render($page['help']); ?></div>
       <?php endif; ?>
+      <?php if (!empty($page['summary'])): ?>
+        <div class="summary"><?php print render($page['summary']); ?></div>
+      <?php endif; ?>
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <?php //var_dump($user);
-      print render($page['content']); ?>
+      <?php  if (!empty($page['content'])): ?>
+        <?php //var_dump($page['content'])// See block and user_profile.tpl.php ?>
+        <div class="user-profile-content">
+        <?php print render($page['content']); ?>  
+        </div> 
+      <?php  endif; ?>
+      <div class="page-user-obs">
+        <?php
+          // TODO test role or content   
+          //block sauvages article              
+          $blockVArticleUid = block_load('views','v_liste_article-block_3');
+          print drupal_render(_block_get_renderable_array(_block_render_blocks(array($blockVArticleUid))));
+        ?>
+        <?php  
+          //block sauvages with photo              
+          $blockVObsUIdURL = block_load('views','v_obs-block_3');
+          print drupal_render(_block_get_renderable_array(_block_render_blocks(array($blockVObsUIdURL))));
+        ?>
+        <?php  
+          //block sauvages without photo                
+          $blockVObsUIdURL = block_load('views','v_obs-block_5');
+          print drupal_render(_block_get_renderable_array(_block_render_blocks(array($blockVObsUIdURL))));
+        ?>
+      </div>
     </section>
+
 
     <?php if (!empty($page['sidebar_second'])): ?>
       <aside class="span3" role="complementary">

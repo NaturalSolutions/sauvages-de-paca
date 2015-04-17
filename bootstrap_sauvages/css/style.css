@@ -1474,7 +1474,7 @@ color: #555;
   margin-top: 3px;
   float: left;
 }
-/*PAGE USER*/
+/**************** PAGE USER *****************/
 #block-views-v-liste-article-block-3 caption {
   display: none;
 }
@@ -1491,6 +1491,32 @@ color: #555;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif-webkit-body;
   font-size: 13px;
   margin-bottom: 5px;
+}
+/*obs with image*/
+#block-views-v-obs-block-3 .views-field-fid img{
+  width: 100px;
+  height: 100px;
+}
+#block-views-v-obs-block-3 .view-content ul{
+  list-style-type: none;
+}
+#block-views-v-obs-block-3 .view-content ul li{
+  display: inline-block;
+}
+#block-views-v-obs-block-3 .view-content ul li .views-field-nom-scientifique span{
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+#block-views-v-obs-block-3 .view-content ul li{
+  font-size: 13px;
+}
+/*classement nat*/
+.block-ns-blocks-profile-user-game ul{
+  list-style-type: none;
+  margin-left: 0px;
 }
 /*************************************/
 /************** COLORBOX************/
