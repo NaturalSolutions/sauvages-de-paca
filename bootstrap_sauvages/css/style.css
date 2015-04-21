@@ -557,7 +557,9 @@ html[data-useragent*='MSIE 9.0'] #fold6 .table TD{
 }
 
 /********FOOTER********/
-
+.region-footer .nav>li>a:hover {
+  background-color: #222;
+}
 .btn.btn-large.btn-participe.span3 {
 margin-left: 38%;
 margin-top: 20px;
