@@ -298,6 +298,9 @@ h4.caption-carousel{
 #fold2 .flexslider {
 background: #333;
 border-color: #333;
+/*  background: transparent;
+  border-color: transparent;
+  box-shadow: none;*/
 }
 .flexslider .slides img{
   webkit-border-radius: 6px;
@@ -960,8 +963,16 @@ font-size: 18px;
     margin-top: -20px;
   }
   #fold4 {
-	background-color: #28717E;
-    }
+	 background-color: #28717E;
+  }
+  .view-v-badges h3{
+    font-size: 15px;
+    font-family: initial;
+  }
+  .view-v-badges h4{
+    font-size: 13px;
+    font-family: initial;
+  }
 }
 /**************************************************/
 /********************ASIDE**********************/
@@ -1412,6 +1423,24 @@ border: 1px solid white;
 }
 .colonne-liste li img {
 width: 50px;
+}
+
+/******* v-badges *******/
+
+.view-v-badges h4 {
+  font-family: inherit;
+}
+.view-v-badges h4, .view-v-badges h3{
+  font-family: inherit;
+  font-weight: 300;
+  color: #555;
+}
+.views-field.views-field-description .field-content{
+  height: 80px;
+  overflow: scroll;
+}
+.view-v-badges td.span3 {
+  border: 0px;
 }
 
 /*************************************/
