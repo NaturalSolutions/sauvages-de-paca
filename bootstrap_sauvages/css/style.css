@@ -1555,3 +1555,7 @@ color: #555;
 .galerie-article td {
     padding-left: 20px;
 }
+div#cboxLoadedContent svg {
+  width: 100%;
+  height: 100%;
+}
