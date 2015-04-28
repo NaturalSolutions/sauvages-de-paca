@@ -49,6 +49,14 @@ Drupal.behaviors.hideUserProfileContent = {
   }
 };
 
+// Add tooltip Bootstrap 2 for badge display with colorbox module
+Drupal.behaviors.tooltipColoBox = {
+  attach: function (context, settings) {
+    jQuery('a.colorbox.init-colorbox-processed.cboxElement').tooltip();
+  }
+};
+
+
 // Custom login toboggan
 (function ($) {
   Drupal.behaviors.LoginToboggan = {
