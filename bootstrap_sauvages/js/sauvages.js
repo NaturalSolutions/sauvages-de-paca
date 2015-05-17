@@ -52,7 +52,28 @@ Drupal.behaviors.hideUserProfileContent = {
 // Add tooltip Bootstrap 2 for badge display with colorbox module
 Drupal.behaviors.tooltipColoBox = {
   attach: function (context, settings) {
-    jQuery('a.colorbox.init-colorbox-processed.cboxElement').tooltip();
+    jQuery('.file-badge a.colorbox.init-colorbox-processed.cboxElement').tooltip();
+  }
+};
+
+// display title on hover on obs
+Drupal.behaviors.hoverTitle = {
+  attach: function (context, settings) {
+    // jQuery('.page-user-obs',context).once(function(){
+    //   jQuery('.view-id-v_obs a').find('.obs-caption').height(0);
+    //   jQuery('.view-id-v_obs a').hover(
+    //     function(){
+    //       if (!jQuery(this).find('.obs-caption').hasClass('animated')) {
+    //         jQuery(this).find('.obs-caption').dequeue().stop().animate({ height: "36px" });
+    //       }
+    //     },
+    //     function(){
+    //       jQuery(this).find('.obs-caption').addClass('animated').animate({ height: "0px" }, "normal", "linear", function() {
+    //         jQuery(this).removeClass('animated').dequeue();
+    //       });
+    //     }
+    //   );
+    // });
   }
 };
 
