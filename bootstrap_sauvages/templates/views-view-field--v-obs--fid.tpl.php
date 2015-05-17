@@ -24,8 +24,16 @@
 
 ?>
 <?php if($output): ?>
-<?php $image = file_load($output); ?>
-<img style="background-image : url(<?php echo file_create_url($image->uri) ?>);background-size:cover;background-repeat:no-repeat;" src= "" />
+<?php 	$image = file_load($output);
+		$nomScientifique = $row->ns_obs_nom_scientifique;
+		$date = format_date($row->ns_obs_date, $type = 'medium');
+		$numTaxonEflore = $row->ns_obs_num_taxon_eflore;
+		$nomCommun =  views_get_view_result('v_fiche_espece', 'block', $numTaxonEflore );
+?>
+<a href='<?php echo file_create_url($image->uri) ?>' class='colorbox init-colorbox-processed cboxElement' title="<?php echo $nomCommun[0]->node_title." - ".$date; ?>">
+	<img style="background-image : url(<?php echo file_create_url($image->uri) ?>);background-size:cover;background-repeat:no-repeat;" src= "" />
+	<div class="obs-caption"><p><?php echo $nomCommun[0]->node_title; ?></p></div>
+</a>
 <?php else: ?>
 <img class="thumbnail-mini" src= "<?php echo file_create_url('public://') ?>default_images/image-par-defaut.jpg" />
 <?php endif; ?>
