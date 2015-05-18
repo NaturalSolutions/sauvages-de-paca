@@ -94,16 +94,26 @@
           $blockVArticleUid = block_load('views','v_liste_article-block_3');
           print drupal_render(_block_get_renderable_array(_block_render_blocks(array($blockVArticleUid))));
         ?>
-        <?php  
-          //block sauvages with photo              
-          $blockVObsUIdURL = block_load('views','v_obs-block_3');
-          print drupal_render(_block_get_renderable_array(_block_render_blocks(array($blockVObsUIdURL))));
-        ?>
-        <?php  
-          //block sauvages without photo                
-          $blockVObsUIdURL = block_load('views','v_obs-block_5');
-          print drupal_render(_block_get_renderable_array(_block_render_blocks(array($blockVObsUIdURL))));
-        ?>
+        <ul class="nav nav-pills nav-button pull-right" >
+          <li class="active"><a href="#photo-obs" data-toggle="pill" >Photo</a></li>
+          <li><a href="#liste-obs" data-toggle="pill" >Liste</a></li>
+        </ul>
+        <div class="tab-content clearRight">
+          <div class="tab-pane active" id="photo-obs">        
+            <?php  
+            //block sauvages with photo              
+            $blockVObsUIdURL = block_load('views','v_obs-block_3');
+            print drupal_render(_block_get_renderable_array(_block_render_blocks(array($blockVObsUIdURL))));
+          ?>
+        </div>
+        <div class="tab-pane" id="liste-obs">
+          <?php  
+            //block sauvages without photo                
+            $blockVObsUIdURL = block_load('views','v_obs-block_5');
+            print drupal_render(_block_get_renderable_array(_block_render_blocks(array($blockVObsUIdURL))));
+          ?>
+        </div>
+        </div>
       </div>
     </section>
 
