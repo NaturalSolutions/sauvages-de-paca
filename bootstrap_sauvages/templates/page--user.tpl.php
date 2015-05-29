@@ -95,7 +95,7 @@
           print drupal_render(_block_get_renderable_array(_block_render_blocks(array($blockVArticleUid))));
         ?>
         <ul class="nav nav-pills nav-button pull-right" >
-          <li class="active"><a href="#photo-obs" data-toggle="pill" >Photo</a></li>
+          <li class="active"><a href="#photo-obs" data-toggle="pill" >Photos</a></li>
           <li><a href="#liste-obs" data-toggle="pill" >Liste</a></li>
         </ul>
         <div class="tab-content clearRight">
